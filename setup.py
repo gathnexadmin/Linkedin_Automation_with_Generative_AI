@@ -21,7 +21,7 @@ setup(
     url='https://github.com/gathnexadmin/Linkedin_Automation_with_Generative_AI.git',
 
     # Packages to be included in the distribution
-    packages=['psi', 'llm_automation'],
+    packages=["Linkedin PSI"],
 
     install_requires=requirements,
 
