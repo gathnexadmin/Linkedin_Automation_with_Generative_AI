@@ -24,8 +24,9 @@ Install our linkedin_automation psi repo
 ```python
 pip install -q git+https://github.com/gathnexadmin/Linkedin_Automation_with_Generative_AI.git
 ````
-- Import files and setup the credentials
-- To know more about how to create linkedin access toked checkout previous blog : https://medium.com/@gathnex/automating-the-linkedin-posts-using-generative-ai-llm-part-1-how-to-create-linkedin-api-e5f77fa46e5f
+Import files and setup the credentials
+
+To know more about how to create linkedin access toked checkout previous blog : https://medium.com/@gathnex/automating-the-linkedin-posts-using-generative-ai-llm-part-1-how-to-create-linkedin-api-e5f77fa46e5f
 ```python
 #import this two files contain PSI automation system
 from psi import llm_automation, Linkedin_post
