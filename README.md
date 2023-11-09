@@ -26,7 +26,7 @@ pip install -q git+https://github.com/gathnexadmin/Linkedin_Automation_with_Gene
 ````
 Import files and setup the credentials
 
-To know more about how to create linkedin access toked checkout previous blog : https://medium.com/@gathnex/automating-the-linkedin-posts-using-generative-ai-llm-part-1-how-to-create-linkedin-api-e5f77fa46e5f
+To know more about how to create linkedin access token checkout previous blog : https://medium.com/@gathnex/automating-the-linkedin-posts-using-generative-ai-llm-part-1-how-to-create-linkedin-api-e5f77fa46e5f
 ```python
 #import this two files contain PSI automation system
 from psi import llm_automation, Linkedin_post
@@ -45,7 +45,7 @@ def psi(prompt):
     else:
         return llm.normal_gpt()
 ```
-Now, you're read to use Genrative AI with PSI tool
+Now, you're ready to use Genrative AI with PSI tool
 ```python
 psi("create content about my new medium blog post https://medium.com/@gathnex/new-generative-ai-course-by-deeplearning-ai-daf34e24e9c8 and post it on my linkedin")
 ```
