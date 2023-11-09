@@ -7,8 +7,8 @@ def read_requirements(file):
 requirements = read_requirements("requirements.txt")
 
 setup(
-    name='PIS',  # Replace 'myproject' with your project name
-    version='1.0.0',   # Specify the version of your project
+    name='PIS',
+    version='1.0.0',  
 
     # Project description
     description='Linkedin Post Automation system',
@@ -21,7 +21,7 @@ setup(
     url='https://github.com/gathnexadmin/Linkedin_Automation_with_Generative_AI.git',
 
     # Packages to be included in the distribution
-    packages=["Linkedin PSI"],
+    packages=["psi"],
 
     install_requires=requirements,
 
