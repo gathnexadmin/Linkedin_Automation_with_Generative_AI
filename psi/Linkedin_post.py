@@ -37,12 +37,16 @@ class LinkedinAutomate:
                 return None, None
         x = self.get_page_content()
         client = OpenAI(api_key = self.openai_api)
-        DEFAULT_SYSTEM_PROMPT = "You are a content title and description generator. Your task is to create compelling and engaging titles for various types of content, such as articles, blogs, videos, and products. Additionally, you are responsible for generating concise and informative descriptions that capture the essence of the content. Focus on creating attention-grabbing titles that pique the interest of the audience and descriptions that provide a clear overview of the content's key points. If additional context is needed, ask for clarification to generate more accurate titles and descriptions. Your goal is to assist users in creating captivating and informative content titles and descriptions."
+        DEFAULT_SYSTEM_PROMPT = '''You are a content title and description generator. Your task is to create a captivating title and a concise short description for a given content. Provide one compelling title and a informative short description that clearly conveys the main points of the content.
+         response should be in this format. for example.
+         Title: Title Content
+         Description: Description Content
+         Aim for creativity and clarity in your creations, ensuring that both the title and description are attention-grabbing and informative. make a description short don't give too long'''
         response = client.chat.completions.create(
         model= "gpt-3.5-turbo",
         messages=[
                     {f"role": "system", "content": DEFAULT_SYSTEM_PROMPT},
-                    {f"role": "user", "content": "Content :'" + x + "'. Create one title and description of the content and no other content"},
+                    {f"role": "user", "content": "[" + x + "].Create one title and description of the content"},
                 ]
                 )
         mod_output = response.choices[0].message.content
