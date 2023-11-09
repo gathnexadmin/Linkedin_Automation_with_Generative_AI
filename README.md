@@ -17,15 +17,36 @@ This tool leverages the power of artificial intelligence and machine learning to
 - Installation 🎯
 - Clone or download the repository 🚀
 
-## Installation
+## Quickstart
 
-1. Clone or download the repository.
-2. Install the required dependencies by running the command: `pip install -r requirements.txt`.
-
-## Usage
-
-1. Create a `config.json` file with your LinkedIn account credentials and desired posting schedule.
-2. Run the tool using the command: `python main.py`.
+### **Python installation**
+Install our linkedin_automation psi repo 
+```python
+pip install -q git+https://github.com/gathnexadmin/Linkedin_Automation_with_Generative_AI.git
+````
+There are individual packages for the following languages, please install it for the build.
+```python
+#import this two files contain PSI automation system
+from psi import llm_automation, Linkedin_post
+#setup your credentials
+OPENAI_API_KEY = "openai key"
+access_token = "linkedin access token"
+```
+PSI function
+```python
+def psi(prompt):
+    llm = llm_automation.llm_auto(prompt, OPENAI_API_KEY)
+    if llm.intent_indentifier() == "#Post":
+        url = llm.prompt_link_capturer()
+        res = Linkedin_post.LinkedinAutomate(access_token, url, OPENAI_API_KEY).main_func()
+        return llm.posted_or_not(res)
+    else:
+        return llm.normal_gpt()
+```
+Now, you're read to use Genrative AI with PSI tool
+```python
+psi("create content about my new medium blog post https://medium.com/@gathnex/new-generative-ai-course-by-deeplearning-ai-daf34e24e9c8 and post it on my linkedin")
+```
 
 ## Contributing
 
