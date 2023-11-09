@@ -1,6 +1,5 @@
 import re
 from openai import OpenAI
-from cred import OPENAI_API_KEY
 
 class llm_auto:
 
