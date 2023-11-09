@@ -23,7 +23,7 @@ setup(
     # Packages to be included in the distribution
     packages=["psi"],
 
-    install_requires= ['openai','re', 'regex', 'requests', 'jsonlib2', 'beautifulsoup4'],
+    install_requires= ['openai', 'regex', 'requests', 'jsonlib2', 'beautifulsoup4'],
 
     # Other metadata such as license, classifiers, etc.
     license='MIT',
