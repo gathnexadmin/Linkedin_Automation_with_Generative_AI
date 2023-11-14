@@ -43,7 +43,7 @@ class LinkedinAutomate:
          Description: Description Content
          Aim for creativity and clarity in your creations, ensuring that both the title and description are attention-grabbing and informative. make a description short don't give too long'''
         response = client.chat.completions.create(
-        model= "gpt-3.5-turbo",
+        model= "gpt-3.5-turbo-0613",
         messages=[
                     {f"role": "system", "content": DEFAULT_SYSTEM_PROMPT},
                     {f"role": "user", "content": "[" + x + "].Create one title and description of the content"},
