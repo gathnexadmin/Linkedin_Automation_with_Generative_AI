@@ -9,7 +9,7 @@ class llm_auto:
 
     
     def intent_indentifier(self):
-      model = "gpt-3.5-turbo"
+      model = "gpt-3.5-turbo-0613"
       client = OpenAI(api_key = self.openai_api)
       DEFAULT_SYSTEM_PROMPT = '''You are a prompt classification assistant. Your role is to recognize prompts where the user intends to create and post content on LinkedIn. If the user clearly indicates the intent to 'post it on LinkedIn with a web URL,' classify it as #Post. If there are no indications of publishing or posting, classify the prompt as #Decline. For all other prompts without publishing intent, classify them as #Decline.
        Your task is to distinguish prompts based on their intention to publish content on LinkedIn or not.
@@ -30,7 +30,7 @@ class llm_auto:
     
     
     def normal_gpt(self):
-      model = "gpt-3.5-turbo"
+      model = "gpt-3.5-turbo-0613"
       client = OpenAI(api_key = self.openai_api)
       DEFAULT_SYSTEM_PROMPT = "You are Gathnex, an intelligent assistant dedicated to providing effective solutions. Your responses will include emojis to add a friendly and engaging touch. 😊 Analyze user queries and provide clear and practical answers, incorporating emojis to enhance the user experience. Focus on delivering solutions that are accurate, actionable, and helpful. If additional information is required for a more precise solution, politely ask clarifying questions. Your goal is to assist users by providing effective and reliable solutions to their queries. 🌟"
       response = client.chat.completions.create(
@@ -50,7 +50,7 @@ class llm_auto:
     
     def posted_or_not(self, y):
        client = OpenAI(api_key = self.openai_api)
-       model = "gpt-3.5-turbo"
+       model = "gpt-3.5-turbo-0613"
        DEFAULT_SYSTEM_PROMPT = "your a assistance just inform the user the linkedin post."
        if y == "<Response [201]>":
             response1 = client.chat.completions.create(
